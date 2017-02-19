@@ -11,30 +11,18 @@
     <url>http://maven.apache.org</url>
 
     <properties>
-        <kotlin>1.0.5</kotlin>
         <servlet>3.1.0</servlet>
         <jstl>1.2</jstl>
         <jsp>2.3.1</jsp>
         <commons-logging>1.2</commons-logging>
         <slf4j-log4j12>1.7.21</slf4j-log4j12>
         <spring>4.3.6.RELEASE</spring>
+        <shiro>1.3.2</shiro>
     </properties>
 
     <dependencies>
 
-        <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-stdlib</artifactId>
-            <version>${kotlin}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-test-junit</artifactId>
-            <version>${kotlin}</version>
-            <scope>test</scope>
-        </dependency>
-
+        <!-- junit -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -42,12 +30,14 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- servlet library -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>${servlet}</version>
         </dependency>
 
+        <!-- jsp library -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
@@ -60,6 +50,7 @@
             <version>${jsp}</version>
         </dependency>
 
+        <!-- log library -->
         <dependency>
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
@@ -72,6 +63,7 @@
             <version>${slf4j-log4j12}</version>
         </dependency>
 
+        <!-- spring foundation-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
@@ -84,12 +76,14 @@
             <version>${spring}</version>
         </dependency>
 
+        <!-- spring context-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>${spring}</version>
         </dependency>
 
+        <!-- spring web -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
@@ -102,36 +96,35 @@
             <version>${spring}</version>
         </dependency>
 
+        <!-- shiro -->
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-core</artifactId>
+            <version>${shiro}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-web</artifactId>
+            <version>${shiro}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring</artifactId>
+            <version>${shiro}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-ehcache</artifactId>
+            <version>${shiro}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
-
         <finalName>spring-study</finalName>
-
-        <plugins>
-            <plugin>
-                <artifactId>kotlin-maven-plugin</artifactId>
-                <groupId>org.jetbrains.kotlin</groupId>
-                <version>${kotlin}</version>
-                <executions>
-                    <execution>
-                        <id>compile</id>
-                        <phase>process-sources</phase>
-                        <goals>
-                            <goal>compile</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>test-compile</id>
-                        <phase>process-test-sources</phase>
-                        <goals>
-                            <goal>test-compile</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
-        </plugins>
     </build>
 
 </project>
