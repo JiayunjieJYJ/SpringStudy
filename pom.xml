@@ -18,6 +18,10 @@
         <slf4j-log4j12>1.7.21</slf4j-log4j12>
         <spring>4.3.6.RELEASE</spring>
         <shiro>1.3.2</shiro>
+        <mysql-connector>5.1.40</mysql-connector>
+        <druid>1.0.18</druid>
+        <mybatis>3.4.1</mybatis>
+        <mybatis-spring>1.3.0</mybatis-spring>
     </properties>
 
     <dependencies>
@@ -26,8 +30,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
+            <version>4.12</version>
         </dependency>
 
         <!-- servlet library -->
@@ -83,6 +86,13 @@
             <version>${spring}</version>
         </dependency>
 
+        <!-- spring test-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring}</version>
+        </dependency>
+
         <!-- spring web -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -119,6 +129,38 @@
             <groupId>org.apache.shiro</groupId>
             <artifactId>shiro-ehcache</artifactId>
             <version>${shiro}</version>
+        </dependency>
+
+        <!-- jdbc -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-connector}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>${druid}</version>
+        </dependency>
+
+        <!-- mybatis -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>${mybatis}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+            <version>${mybatis-spring}</version>
         </dependency>
 
     </dependencies>

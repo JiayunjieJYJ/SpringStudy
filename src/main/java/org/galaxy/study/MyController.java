@@ -24,6 +24,8 @@ public class MyController extends BaseController {
     @RequestMapping(value = "/hello/{name}")
     public String sayHello(Model model, @PathVariable("name") String name) {
 
+        console(name);
+
         model.addAttribute(name);
 
         return "hello.jsp";
